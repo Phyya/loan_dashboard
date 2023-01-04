@@ -1,0 +1,28 @@
+@import "../../../styles/index.scss";
+.loadingOverlay {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .spinner {
+    animation: rotate 2s infinite;
+    margin-left: 20px;
+    font-size: 30px;
+    > * {
+      color: $primary_green;
+    }
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
