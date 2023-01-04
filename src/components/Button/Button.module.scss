@@ -1,0 +1,87 @@
+@import "../../styles/index.scss";
+button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  white-space: nowrap;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .spinner {
+    animation: rotate 2s infinite;
+    margin-left: 20px;
+    font-size: 16px;
+    > * {
+      color: #fff;
+    }
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+.solidButton {
+  color: white;
+  background-color: $primary_green;
+}
+
+.btnRadius {
+  border-radius: $borderx3;
+}
+.primary {
+  color: $primary_green;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: $borderx1;
+  border: 1px solid $primary_green;
+  font-size: 10px;
+  font-weight: 600;
+
+  &:hover {
+    background-color: $primary_green;
+    color: white;
+  }
+}
+.danger {
+  color: $danger;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: $borderx1;
+  border: 1px solid $danger;
+  font-size: 10px;
+  font-weight: 600;
+  &:hover {
+    background-color: $danger;
+    color: white;
+  }
+}
+.secondary {
+  color: $primary_blue;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: $borderx1;
+  border: 1px solid $primary_blue;
+  font-size: 10px;
+  font-weight: 600;
+  &:hover {
+    background-color: $primary_blue;
+    color: white;
+  }
+}
