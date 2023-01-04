@@ -1,0 +1,26 @@
+@import "../../styles/index.scss";
+
+.optionsModal {
+  background-color: white;
+  position: absolute;
+  border: 2px solid green;
+  right: -10px;
+  border: 1px solid rgba(84, 95, 125, 0.04);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  z-index: 9;
+
+  img {
+    width: 15px;
+  }
+}
+.overlay {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
