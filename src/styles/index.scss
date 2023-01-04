@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+@font-face {
+  font-family: "Avenir Next";
+  src: local("Avenir Next"),
+    url(./../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "AvenirBold";
+  src: local("Avenir Next"),
+    url(./../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "SF Compact";
+  src: local("SF Compact"),
+    url(./../assets/fonts/SFCompactText-Regular.ttf) format("truetype");
+}
+
+//colors
+$primary_green: #39cdcc;
+$secondary_green: #f3fcfc;
+$background_wrapper: #fdfdfd;
+$background_wrapper_inner: #fbfbfb;
+$danger: #e4033b;
+$primary_blue: #213f7d;
+$success: #39cd62;
+$secondary_text: #545f7d;
+$gold: #e9b200;
+
+//borderRadii
+$borderx1: 4px;
+$borderx2: 5px;
+$borderx3: 8px;
+$rounded: 50%;
+$borderBottom: 1px solid rgba(84, 95, 125, 0.2);
+
+//font
+$primary_font: "Avenir Next", sans-serif;
+$primary_font_bold: "AvenirBold", sans-serif;
+$secondary_font: "Work Sans", sans-serif;
+$SFCompact: "SF Compact", sans-serif;
+//breakpoints
+@mixin breakpoint($point) {
+  @if $point ==xl {
+    //1120px
+    @media (min-width: 70em) {
+      @content;
+    }
+  } @else if $point == lg {
+    //1024px
+    @media (min-width: 64em) {
+      @content;
+    }
+  } @else if $point == lgg {
+    //768px
+    @media (min-width: 72em) {
+      @content;
+    }
+  } @else if $point == md {
+    //768px
+    @media (min-width: 48em) {
+      @content;
+    }
+  } @else if $point == msm {
+    //600px
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $point == sm {
+    //600px
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if $point == ss {
+    //600px
+    @media (max-width: 300px) {
+      @content;
+    }
+  } @else if $point == xs {
+    //600px
+    @media (max-width: 420px) {
+      @content;
+    }
+  } @else if $point == xss {
+    //600px
+    @media (max-width: 500px) {
+      @content;
+    }
+  }
+}
+
+body {
+  width: 100%;
+  background-color: $background_wrapper;
+}
