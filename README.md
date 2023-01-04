@@ -39,7 +39,7 @@ On clicking on the application link [Lendsqr](https://nafisat-faruk-lendsqr-fe-t
 
 ## Testing
 
-All components in the src folder havve been tested using React Testing Library and jest covering positive and negative scenarios.
+All components in the src folder have been tested using React Testing Library and jest covering positive and negative scenarios. These tests can be found in the _tests_ folder in each components folder.
 
 ## Commit Messages
 

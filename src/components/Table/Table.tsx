@@ -105,7 +105,10 @@ const SortableTable = ({ data }: { data: any[] }) => {
 
   return (
     <div>
-      <div className={styles.tableContainer}>
+      <div
+        className={styles.tableContainer}
+        style={{ height: pageItems.length < 9 ? "100vh" : "" }}
+      >
         {searched && <HiOutlineArrowNarrowLeft onClick={() => resetData()} />}
         <div className={styles.filterHeader}>
           <p onClick={() => setShowFilter(true)}>
