@@ -6,9 +6,11 @@ import UsersDetails from "../pages/Users/UserDetails/UserDetails";
 import Users from "../pages/Users/Users";
 
 const MainRoutes: React.FC<{}> = () => {
+  const user = localStorage.getItem("user");
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
+
       <Route path="/" element={<AdminAccess />}>
         <Route path="" element={<Navigate replace to="/users" />} />
         <Route path="dashboard" element={<Users />} />

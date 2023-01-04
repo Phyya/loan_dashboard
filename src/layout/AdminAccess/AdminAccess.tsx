@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Sidebar from "../../components/Sidebar/Sidebar";
@@ -7,6 +7,10 @@ import styles from "./AdminAccess.module.scss";
 
 const AdminAccess: React.FC<{}> = () => {
   const navigate = useNavigate();
+
+  const [userAvailable, setUserAvailable] = useState(
+    localStorage.getItem("user")
+  );
   const [open, setOpen] = useState(true);
   const isTablet = useMediaQuery("(max-width: 768px)");
   useEffect(() => {
@@ -14,10 +18,10 @@ const AdminAccess: React.FC<{}> = () => {
     !isTablet && setOpen(true);
   }, [isTablet]);
   useEffect(() => {
-    const user = localStorage.getItem("user");
-    user && navigate("/users");
+    userAvailable && navigate("/users");
+    !userAvailable && navigate("/login");
   }, []);
-
+  if (!userAvailable) return null;
   return (
     <div>
       <Header />

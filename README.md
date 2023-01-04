@@ -3,19 +3,19 @@
 Lendsqr is a platform that provides lending-as-a-service to companies to simplify the lending process with an easy, but sophisticated technology that can guarantee an awesome lending experience.
 <br/>
 
-This repository contains all the client side code that runs on a browser. The live application can be found at [Lendsqr](https://nafisat-faruk-lendsqr-fe-test.heroku.com)
+This repository contains all the client side code that runs on a browser. The live application can be found at [Lendsqr](https://nafisat-faruk-lendsqr-fe-test.vercel.app)
 
 ## Getting Familiar With The Stack
 
 This project is built primarily with [React JS/Typescript](https://www.typescriptlang.org/).
 **CSS Library** - [SCSS](https://sass-lang.com/)<br/>
-**Build Tool** - [Netlify](https://www.netlify.com/) <br/>
+**Build Tool** - [Vercel](https://www.vercel.app/) <br/>
 **HTTP client** - [Axios](https://www.geeksforgeeks.org/axios-in-react-a-guide-for-beginners/) <br/>
 **Testing Library** - [Jest, React Testing Library](https://facebook.github.io/create-react-app/docs/running-tests).
 
 ## User Flow
 
-On clicking on the application link [Lendsqr](https://nafisat-faruk-lendsqr-fe-test.heroku.com), the user is redirected to the login page. After successful login, the user is taken to the users page.
+On clicking on the application link [Lendsqr](https://nafisat-faruk-lendsqr-fe-test.vercel.app), the user is redirected to the login page. After successful login, the user is taken to the users page.
 
 ## Features
 
