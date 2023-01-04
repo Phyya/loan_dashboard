@@ -22,7 +22,6 @@ const SortableTable = ({ data }: { data: any[] }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const organizations = useMemo(() => data.map((obj) => obj?.orgName), [data]);
-  const statuses = useMemo(() => data.map((obj) => obj?.status), [data]);
   const [searched, setSearched] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [stateData, setStateData] = useState(data);
@@ -206,7 +205,6 @@ const SortableTable = ({ data }: { data: any[] }) => {
               open={showFilter}
               close={() => resetData()}
               organizations={organizations}
-              statuses={statuses}
               filterByParam={(val) => handleFilter(val)}
             />
           )}

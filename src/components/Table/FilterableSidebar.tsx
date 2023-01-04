@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { statuses } from "../../data";
 import Button from "../Button/Button";
 import Dropdown from "../Dropdown/Dropdown";
 import InputField from "../InputField/InputField";
@@ -8,20 +9,18 @@ type FilterProps = {
   orgName: string;
   email: string;
   username: string;
-  status: string;
   phoneNumber: string;
   date: string;
 };
 type Props = {
   organizations: string[];
-  statuses: string[];
   close: () => void;
   open: boolean;
   filterByParam: (val: FilterProps) => void;
 };
 
 const FilterableSidebar: React.FC<Props> = (props) => {
-  const { close, organizations, statuses, filterByParam } = props;
+  const { close, organizations, filterByParam } = props;
   const [state, setState] = useState({
     orgName: organizations[0],
     email: "",

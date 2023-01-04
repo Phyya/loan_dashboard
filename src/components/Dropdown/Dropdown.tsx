@@ -34,8 +34,8 @@ const Dropdown: React.FC<Props> = (props) => {
           onChange={handleChange}
           data-testid="select"
         >
-          {options.map((option) => (
-            <option key={option} value={option}>
+          {options.map((option, index) => (
+            <option key={`${option}-${index}`} value={option}>
               {option}
             </option>
           ))}
