@@ -1,0 +1,244 @@
+@import "../../styles/index.scss";
+
+.usersContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  font-family: $secondary_font;
+  h1 {
+    font-size: 24px;
+  }
+}
+.usersSummaryContainer {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.usersDetailsContainer {
+  padding: 0 10px;
+  * {
+    font-family: $secondary_font;
+  }
+  .userDetailsBack {
+    display: flex;
+    width: 150px;
+    gap: 15px;
+    align-items: center;
+    font-size: 13px;
+    svg {
+      font-size: 25px;
+    }
+  }
+}
+.userDetailsActionContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.userDetailsAction {
+  display: flex;
+  gap: 20px;
+  @include breakpoint(xs) {
+    display: none;
+  }
+}
+.userDetailsActionMenu {
+  display: none;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: $borderx1;
+  position: relative;
+  box-shadow: 3px 5px 21px rgba(0, 0, 0, 0.04);
+  svg {
+    cursor: pointer;
+  }
+  @include breakpoint(xs) {
+    display: flex;
+  }
+}
+.usersDetailsTabsContainer {
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0 20px;
+  padding: 10px 20px 0px;
+  gap: 20px;
+  p {
+    color: $primary_blue;
+    font-size: smaller;
+    @include breakpoint(md) {
+      font-size: 14px;
+    }
+  }
+  img {
+    border-radius: 50%;
+  }
+  > div {
+    display: flex;
+    .bordered {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-right: $borderBottom;
+      padding: 0 20px;
+      &.noBordered {
+        @include breakpoint(xss) {
+          border-right: unset;
+        }
+      }
+      .usersDetailsHorizontalFlex {
+        padding: 0;
+        margin-left: -20px;
+      }
+      @include breakpoint(xss) {
+        width: 100%;
+      }
+    }
+  }
+  .usersDetailsHorizontalFlex {
+    display: flex;
+
+    padding: 0;
+    &.gap {
+      align-items: center;
+      gap: 10px;
+      > div p {
+        margin-top: 5px;
+      }
+    }
+    img {
+      width: 50px;
+    }
+
+    &.usersDetailsHorizontalFlexCollapse {
+      @include breakpoint(xss) {
+        gap: 10px;
+        flex-direction: column;
+      }
+    }
+    &.usersDetailsHorizontalFlexBottom {
+      @include breakpoint(xss) {
+        padding-bottom: 20px;
+        border-bottom: $borderBottom;
+      }
+      @include breakpoint(ss) {
+        flex-direction: column;
+        gap: 10px;
+        .bordered {
+          align-items: flex-start;
+          border-right: unset;
+          padding: 0;
+          .usersDetailsHorizontalFlex {
+            width: 100%;
+            text-align: left;
+            padding-left: 18px;
+          }
+        }
+      }
+    }
+    @include breakpoint(xss) {
+      width: 100%;
+    }
+  }
+  .usersDetailsColumnFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    gap: 10px;
+    @include breakpoint(xss) {
+      padding: 0;
+    }
+  }
+  .usersDetailsTablist {
+    flex: 1;
+    display: flex;
+    overflow: auto;
+    overflow-x: scroll;
+    > div {
+      display: flex;
+      min-height: min-content;
+      width: 100%;
+      justify-content: space-between;
+      gap: 30px;
+
+      p {
+        min-width: max-content;
+        text-align: center;
+        font-family: $SFCompact;
+      }
+      p:first-child {
+        font-family: $secondary_font;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+.usersDetailsGrid {
+  display: grid;
+  border-bottom: $borderBottom;
+  padding: 20px 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  @include breakpoint(lgg) {
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+  }
+  @include breakpoint(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include breakpoint(xs) {
+    font-size: x-small;
+  }
+}
+.usersDetailsColumnFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 10px;
+}
+.usersDetailsStar {
+  display: flex;
+  svg {
+    > * {
+      color: $gold;
+    }
+  }
+}
+.usersDetailsTabInfo {
+  padding: 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.extraTabContainer {
+  margin: auto;
+  @include breakpoint(md) {
+    margin: 0 100%;
+    width: 100%;
+  }
+}
