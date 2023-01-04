@@ -1,0 +1,165 @@
+@import "../../styles/index.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  z-index: 9;
+  color: #fff;
+  height: 80px;
+  margin-top: -18px;
+  width: 100%;
+  position: fixed;
+  padding: 42px 0;
+  padding-top: 59px;
+  justify-content: space-between;
+  box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.04);
+  font-family: $secondary_font;
+  .headerLeft {
+    width: 70%;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+    @include breakpoint(md) {
+      display: flex;
+    }
+  }
+  .headerLogo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 15px;
+  }
+
+  .headerSearch {
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+  .headerProfile {
+    right: 0;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .headerNotifications {
+      margin: 0 10px;
+    }
+    .headerProfileAvatar {
+      border-radius: $rounded;
+      width: 35px;
+    }
+    .headerProfileDetails {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      position: relative;
+    }
+  }
+}
+
+.menuNav {
+  margin: 0 28px;
+  font-size: 20px;
+  cursor: pointer;
+
+  * {
+    color: $primary_blue;
+  }
+
+  @include breakpoint(md) {
+    display: none;
+  }
+}
+.sidebar {
+  background-color: $secondary_green;
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  border-top-left-radius: $borderx3;
+  border-bottom-left-radius: $borderx3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding-top: 50px;
+  transition: all 0.3s ease;
+  z-index: 9;
+  @include breakpoint(xss) {
+    right: -300px;
+    width: 300px;
+  }
+  @include breakpoint(ss) {
+    right: -250px;
+    width: 250px;
+  }
+  @include breakpoint(md) {
+    display: none;
+  }
+  .searchbar {
+    padding: 0 20px;
+    width: 100%;
+  }
+  .sidebarLinks {
+    margin: 30px 0;
+    width: 100%;
+
+    a {
+      display: flex;
+      font-family: $secondary_font;
+      align-items: center;
+      width: 100%;
+      transition: all 0.3s ease;
+      padding: 10px 25px;
+      position: relative;
+      margin-bottom: 15px;
+      img {
+        width: 20px;
+      }
+      h5 {
+        margin-left: 20px;
+        color: $primary_blue;
+        font-size: 1.02rem;
+        width: 33%;
+      }
+      &:hover {
+        border-left: 3px solid $primary_blue;
+        background-color: rgba($primary_green, 0.2);
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.open {
+  right: 0px;
+  svg {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    animation: rotate 0.7s linear;
+    @keyframes rotate {
+      from {
+        transform: rotate(180deg);
+      }
+      to {
+        transform: rotate(0deg);
+      }
+    }
+    * {
+      color: $primary_blue;
+    }
+  }
+}
