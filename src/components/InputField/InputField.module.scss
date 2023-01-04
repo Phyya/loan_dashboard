@@ -1,0 +1,63 @@
+@import "../../styles/index.scss";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  background-color: transparent !important;
+}
+.label {
+  margin: 5px 0;
+  font-size: 12px;
+}
+.inputFieldContainer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 2px solid rgba(84, 95, 125, 0.15);
+  border-radius: $borderx2;
+
+  margin-bottom: 10px;
+  transition: all 0.6s ease-in-out;
+  p {
+    font-size: 12px;
+    padding-right: 15px;
+  }
+
+  &.error {
+    border: 2px solid $danger;
+    box-shadow: 1px 1px 6px lightgrey;
+    opacity: 0.8;
+    div {
+      position: absolute;
+      bottom: -16px;
+    }
+  }
+  &.search {
+    margin-bottom: 0;
+    .inputfield {
+      padding: 10px;
+    }
+  }
+}
+.inputfield {
+  width: 100%;
+  border: none;
+  background-color: transparent !important;
+  outline: none;
+  padding: 15px 10px;
+  font-family: $secondary_font;
+  color: $primary_blue;
+
+  &:focus {
+  }
+}
+
+.search {
+  border-radius: 0px;
+  border-right: 0px;
+  border-top-left-radius: $borderx3;
+  border-bottom-left-radius: $borderx3;
+}
