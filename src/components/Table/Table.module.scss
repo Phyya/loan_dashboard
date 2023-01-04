@@ -57,7 +57,7 @@
         padding-left: 100%;
         width: 100%;
         position: relative;
-        padding: 5px !important;
+        padding: 7px !important;
         font-size: 12px !important;
         .inactive,
         .pending,
@@ -177,6 +177,16 @@
   }
   @include breakpoint(xss) {
     flex-direction: column;
+    gap: 10px;
+  }
+  .pageControls {
+    background: rgb(229, 232, 238);
+    border-radius: $borderx1;
+    padding: 7px;
+  }
+  .activePage {
+    color: black;
+    font-weight: bold;
   }
 }
 

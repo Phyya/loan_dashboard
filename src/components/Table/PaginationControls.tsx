@@ -48,6 +48,7 @@ function PaginationControls({
           <button
             onClick={() => onPageChange(currentPage - 1)}
             data-testid="Prev"
+            className={styles.pageControls}
           >
             <Icon src={prev_btn} />
           </button>
@@ -58,7 +59,11 @@ function PaginationControls({
             </React.Fragment>
           )}
           {pages.map((page) => (
-            <button key={page} onClick={() => onPageChange(page)}>
+            <button
+              key={page}
+              onClick={() => onPageChange(page)}
+              className={page == currentPage ? styles.activePage : ""}
+            >
               {page}
             </button>
           ))}
@@ -73,6 +78,8 @@ function PaginationControls({
           <button
             onClick={() => onPageChange(currentPage + 1)}
             data-testid="Next"
+            disabled
+            className={styles.pageControls}
           >
             <Icon src={next_btn} />
           </button>
