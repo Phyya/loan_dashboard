@@ -1,0 +1,29 @@
+@import "../../styles/index.scss";
+.searchbar {
+  width: 100%;
+  display: flex;
+}
+input {
+  width: 100%;
+}
+.searchbarBtn {
+  width: 56px;
+  border-top-right-radius: $borderx2;
+  border-bottom-right-radius: $borderx2;
+}
+.searchbarColumn {
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+
+  gap: 5px;
+  align-items: center;
+  .searchbarColumnBtn {
+    // border: 3px solid green;
+    width: 100%;
+    height: 40px;
+    button {
+      border-radius: $borderx1;
+    }
+  }
+}
