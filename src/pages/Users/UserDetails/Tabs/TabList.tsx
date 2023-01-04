@@ -86,8 +86,11 @@ const UserTabs: React.FC<UserTabProps> = (props) => {
             </div>
           </div>
           <div className={styles.usersDetailsColumnFlex}>
-            <Typography element="p" text={`\u20A6${accountBalance}`} />
-            <Typography element="p" text="9912345678/Providus Bank" />
+            <Typography element="p" text={`\u20A6${accountBalance}`} title />
+            <div>
+              <Typography element="p" text="9912345678/" />
+              <Typography element="p" text="Providus Bank" />
+            </div>
           </div>
         </div>
       </div>

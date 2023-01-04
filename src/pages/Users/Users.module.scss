@@ -43,9 +43,6 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
-  h3 {
-    color: $primary_blue;
-  }
 }
 .userDetailsAction {
   display: flex;
@@ -129,7 +126,13 @@
     img {
       width: 50px;
     }
-
+    h5 {
+      font-size: 18px;
+      color: $primary_blue;
+      @include breakpoint(sm) {
+        font-size: 14px;
+      }
+    }
     &.usersDetailsHorizontalFlexCollapse {
       @include breakpoint(xss) {
         gap: 10px;
@@ -140,6 +143,21 @@
       @include breakpoint(xss) {
         padding-bottom: 20px;
         border-bottom: $borderBottom;
+      }
+      @include breakpoint(xs) {
+        flex-direction: column;
+        .bordered {
+          border-right: unset;
+          padding: 0;
+        }
+        .bordered:first-child {
+          margin-left: 0;
+        }
+
+        .noBordered {
+          align-items: flex-start;
+          margin-top: 10px;
+        }
       }
       @include breakpoint(ss) {
         flex-direction: column;
@@ -166,8 +184,24 @@
     justify-content: center;
     padding: 0 20px;
     gap: 10px;
+    > p:first-child {
+      font-size: 14px;
+      color: $primary_blue;
+      font-weight: 600;
+      @include breakpoint(md) {
+        font-size: 18px;
+      }
+    }
     @include breakpoint(xss) {
       padding: 0;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include breakpoint(lg) {
+        flex-direction: row;
+      }
     }
   }
   .usersDetailsTablist {
