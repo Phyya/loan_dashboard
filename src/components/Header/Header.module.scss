@@ -56,6 +56,13 @@
       gap: 10px;
       position: relative;
     }
+    h5 {
+      color: $primary_blue;
+    }
+    h5:first-child {
+      color: $primary_blue;
+      text-decoration: underline;
+    }
   }
 }
 
