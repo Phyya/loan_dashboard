@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Option.module.scss";
 
 type Options = Record<string, any>;

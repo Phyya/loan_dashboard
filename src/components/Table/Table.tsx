@@ -49,11 +49,11 @@ const SortableTable = ({ data }: { data: any[] }) => {
 
   const startIndex = useMemo(
     () => (currentPage - 1) * ITEMS_PER_PAGE,
-    [currentPage, ITEMS_PER_PAGE]
+    [currentPage]
   );
   const pageItems = useMemo(
     () => stateData.slice(startIndex, startIndex + ITEMS_PER_PAGE),
-    [startIndex, startIndex, ITEMS_PER_PAGE, stateData]
+    [startIndex, stateData]
   );
   useEffect(() => {
     let currentStatePage = location.state?.currentPage;

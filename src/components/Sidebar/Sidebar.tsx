@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
 import { RxCaretRight, RxCaretLeft } from "react-icons/rx";
 import briefcase from "../../assets/icons/briefcase.svg";
 import downcaret from "../../assets/icons/downcaret.svg";

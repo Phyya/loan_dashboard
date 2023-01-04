@@ -27,29 +27,6 @@ function PaginationControls({
   for (let i = startPage; i <= endPage; i++) {
     pages.push(i);
   }
-  function shortenPaginationList(): number[] {
-    if (totalPages <= 10) {
-      return Array.from(Array(totalPages), (_, i) => i + 1);
-    }
-    if (currentPage <= 6) {
-      return Array.from(Array(10), (_, i) => i + 1);
-    }
-    if (currentPage > totalPages - 5) {
-      return Array.from(Array(10), (_, i) => totalPages - 9 + i);
-    }
-    return [
-      currentPage - 5,
-      currentPage - 4,
-      currentPage - 3,
-      currentPage - 2,
-      currentPage - 1,
-      currentPage,
-      currentPage + 1,
-      currentPage + 2,
-      currentPage + 3,
-      currentPage + 4,
-    ];
-  }
 
   return (
     <div className={styles.paginationControlsContainer}>

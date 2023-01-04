@@ -7,15 +7,13 @@
     display: flex;
     align-items: center;
     width: 100%;
-    justify-content: start;
+    justify-content: flex-start;
     transition: all 0.3s ease;
     padding: 10px 20px;
     position: relative;
 
     margin-bottom: 10px;
 
-    img {
-    }
     p {
       margin-left: 10px;
       width: 33%;
@@ -86,7 +84,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     transition: all 0.3s ease;
     padding: 10px 20px;
     position: relative;

@@ -1,6 +1,4 @@
 import React from "react";
-import Icon from "../Icon/Icon";
-import downcaret from "../../assets/icons/downcaret.svg";
 import styles from "./Dropdown.module.scss";
 import Typography from "../Typography/Typography";
 

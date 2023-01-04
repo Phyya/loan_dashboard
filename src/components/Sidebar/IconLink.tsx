@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Icon from "../Icon/Icon";
 import Typography from "../Typography/Typography";
 import styles from "./Sidebar.module.scss";

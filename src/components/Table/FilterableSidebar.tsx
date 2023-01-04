@@ -4,8 +4,6 @@ import Dropdown from "../Dropdown/Dropdown";
 import InputField from "../InputField/InputField";
 import styles from "./Table.module.scss";
 
-type Options = Record<string, any>;
-
 type FilterProps = {
   orgName: string;
   email: string;
@@ -23,7 +21,7 @@ type Props = {
 };
 
 const FilterableSidebar: React.FC<Props> = (props) => {
-  const { open, close, organizations, statuses, filterByParam } = props;
+  const { close, organizations, statuses, filterByParam } = props;
   const [state, setState] = useState({
     orgName: organizations[0],
     email: "",

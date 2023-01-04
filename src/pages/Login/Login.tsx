@@ -28,12 +28,8 @@ const Login: React.FC<{}> = () => {
     <div className={styles.loginContainer}>
       <div className={styles.loginLeft}>
         <div />
-        <img src={logo} className={styles.logo} alt="lendsqr logo" />
-        <img
-          src={loginImg}
-          className={styles.loginImg}
-          alt="lendsqr login image"
-        />
+        <img src={logo} className={styles.logo} alt="lendsqr login" />
+        <img src={loginImg} className={styles.loginImg} alt="lendsqr login" />
       </div>
       <div className={styles.loginRight}>
         <div className={styles.loginDetails}>

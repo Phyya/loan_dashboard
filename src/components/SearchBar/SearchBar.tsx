@@ -11,7 +11,7 @@ interface SearchBarProps {
 }
 
 const SearchBar: FC<SearchBarProps> = (props) => {
-  const { placeholder, column, data } = props;
+  const { placeholder, column } = props;
   const [searchVal, setSearchVal] = useState("");
   const handleSearch = () => {
     if (!searchVal) return;
