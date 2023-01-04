@@ -78,7 +78,6 @@ function PaginationControls({
           <button
             onClick={() => onPageChange(currentPage + 1)}
             data-testid="Next"
-            disabled
             className={styles.pageControls}
           >
             <Icon src={next_btn} />
