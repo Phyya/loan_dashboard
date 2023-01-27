@@ -68,6 +68,7 @@ const Login: React.FC<{}> = () => {
             </div>
           </div>
         </div>
+        <p>Login with any email and password</p>
       </div>
     </div>
   );
